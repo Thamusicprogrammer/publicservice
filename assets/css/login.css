@@ -1,0 +1,274 @@
+ /* Global Styles */
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .main-content {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 1em auto;
+    padding: 2em;
+    background-color: #fff;
+  }
+
+  .company__info {
+    background-color: #008080;
+    border-radius: 20px;
+    padding: 2em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2em;
+  }
+
+  .company_title {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-top: 0.5em;
+  }
+
+  .fa-android {
+    font-size: 3em;
+  }
+
+  .login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1em;
+    margin-top: 1em;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+  .form__input:focus {
+    border-color: #008080;
+    box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+  }
+
+  .form__input[type="checkbox"] {
+    width: auto;
+    margin-top: 1em;
+  }
+
+  .form__input[type="checkbox"] + label {
+    margin-left: 0.5em;
+  }
+
+  .btn {
+    width:40%;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #008080;
+    border: none;
+    padding: 1em 1.5em;
+    margin-top: 1.5em;
+    cursor: pointer;
+    animation: pulsate 1s ease-in-out infinite alternate;
+    flex-direction: row;
+
+  }
+
+  .btn:hover {
+    background-color: #3399ff;
+  }
+
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #008080;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: 10px auto;
+    display: none;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+  .close {
+    font-size: 30px;
+    color: red;
+    cursor: pointer;
+    border-color: crimson;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+  }
+  /* Search Filter Styling */
+#searchFilterContainer {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchInput {
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#searchInput:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+#searchButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  background-color: #45a049;
+}
+
+  /* Modal Fade-in Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Modal Scrollable Section */
+  .modal-body {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #008080;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+
+  @media (max-width: 768px) {
+    .modal-content {
+      width: 95%;
+    }
+
+    table {
+      font-size: 12px;
+    }
+
+    th, td {
+      padding: 10px;
+    }
+
+    .company__info {
+      padding: 1em;
+    }
+
+    .company_title {
+      font-size: 1.3em;
+    }
+  }
