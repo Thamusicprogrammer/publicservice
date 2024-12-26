@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lagos State Public Service Club - Login</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/login.css" />
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="company__info">
+        <img
+          src="assets/img/m-logo.png"
+          alt="Company Logo"
+          style="width: 100px; height: 100px; border-radius: 50%; margin: 10px"
+        />
+        <h4 class="company_title">Lagos State Public Service Club</h4>
+      </div>
+
+      <div class="login_form">
+        <h2>Log In</h2>
+        <form id="loginForm">
+          <input type="text" name="username" id="employeeNumber" class="form__input" placeholder="Employee Number"required/>
+          <input type="password" name="password" id="password" class="form__input" placeholder="Password" required /> 
+          <div>
+            <input type="checkbox" name="remember_me" id="remember_me">
+            <label for="remember_me">Remember Me!</label>
+          </div>
+          <input type="submit" value="Submit" class="btn" />
+          <button type="button" id="adminLogin" class="btn" style="background-color: #ff9900;">Admin Login</button>
+          <!-- <button type="button" id="viewAllBtn" class="btn" style="background-color: #ff9900;">View All Employees</button> -->
+        </form>
+
+        <p id="error-message" class="error-message"></p>
+        <div class="spinner" id="spinner"></div>
+      </div>
+    </div>
+
+    <!-- Modal for displaying employee data -->
+<div id="employeeModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Employee Data</h3>
+      <span class="close" id="closeModal">&times;</span>
+    </div>
+    <div class="modal-body">
+      <!-- Search Input for Employee Number -->
+      <input type="text" id="searchInput" placeholder="Search employees..." />
+
+      <table>
+        <thead>
+          <tr>
+            <th>Employee Number</th>
+            <th>Full Name</th>
+            <th>Ministry</th>
+            <th>Grade</th>
+            <th>Email</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody id="employeeTableBody">
+          <!-- Employee data will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+    <script src="assets/js/login.js">
+      
+    </script>
+  </body>
+</html>
